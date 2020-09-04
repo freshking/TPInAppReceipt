@@ -87,9 +87,12 @@
 		4773655022E692CA006FC04A /* PKC7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476C64BD22BE6DC100D973F9 /* PKC7.swift */; };
 		4773655E22E692CE006FC04A /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476C663E22C1DAC000D973F9 /* Array+Extension.swift */; };
 		4773656822E69311006FC04A /* TPInAppReceipt_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 4773656622E69311006FC04A /* TPInAppReceipt_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		47980BAA24A73C55004E5B5D /* MyDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47980BA924A73C55004E5B5D /* MyDevice.swift */; };
 		479DC54D1DA0B8BB00D9A5E3 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479DC54C1DA0B8BB00D9A5E3 /* Date+Extension.swift */; };
 		47D2133A1E4738AB00994B00 /* Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D213391E4738AB00994B00 /* Initialization.swift */; };
 		47D2133B1E4738AB00994B00 /* Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D213391E4738AB00994B00 /* Initialization.swift */; };
+		47E27420249C347100D42D6A /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E2741F249C347100D42D6A /* PerformanceTests.swift */; };
+		47E27424249C37C800D42D6A /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E27423249C37C800D42D6A /* Device.swift */; };
 		F7B797AC1E43C0FB008A2619 /* InAppReceiptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10738491DC109D48ABBBDEAE /* InAppReceiptTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -136,9 +139,13 @@
 		4773653A22E6920B006FC04A /* TPInAppReceiptWatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPInAppReceiptWatch.h; sourceTree = "<group>"; };
 		4773656422E69310006FC04A /* TPInAppReceipt_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TPInAppReceipt_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4773656622E69311006FC04A /* TPInAppReceipt_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPInAppReceipt_tvOS.h; sourceTree = "<group>"; };
+		47980BA924A73C55004E5B5D /* MyDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDevice.swift; sourceTree = "<group>"; };
 		479DC54C1DA0B8BB00D9A5E3 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		47D213391E4738AB00994B00 /* Initialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Initialization.swift; sourceTree = "<group>"; };
+		47E2741F249C347100D42D6A /* PerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
+		47E27423249C37C800D42D6A /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		47E4F7E82463422D0005BCC0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		47E4F7E9246373F20005BCC0 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +202,7 @@
 				47209ACD1D9E92CC0010BCDE /* TPInAppReceipt.podspec */,
 				476C665022C3C12900D973F9 /* LICENSE */,
 				47E4F7E82463422D0005BCC0 /* README.md */,
+				47E4F7E9246373F20005BCC0 /* Package.swift */,
 				47209A031D9E0FD60010BCDE /* TPInAppReceipt */,
 				47209A0E1D9E0FD60010BCDE /* TPInAppReceiptTests */,
 				4773653922E6920B006FC04A /* TPInAppReceiptWatch */,
@@ -232,6 +240,9 @@
 				47209A111D9E0FD60010BCDE /* Info.plist */,
 				10738491DC109D48ABBBDEAE /* InAppReceiptTests.swift */,
 				472316AA22CD6FC600D08357 /* ASN1Tests.swift */,
+				47E2741F249C347100D42D6A /* PerformanceTests.swift */,
+				47E27423249C37C800D42D6A /* Device.swift */,
+				47980BA924A73C55004E5B5D /* MyDevice.swift */,
 			);
 			path = TPInAppReceiptTests;
 			sourceTree = "<group>";
@@ -461,7 +472,7 @@
 		472099F81D9E0FD60010BCDE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Pavel Tikhonenko";
 				TargetAttributes = {
@@ -585,6 +596,9 @@
 			files = (
 				472316AB22CD6FC600D08357 /* ASN1Tests.swift in Sources */,
 				F7B797AC1E43C0FB008A2619 /* InAppReceiptTests.swift in Sources */,
+				47980BAA24A73C55004E5B5D /* MyDevice.swift in Sources */,
+				47E27420249C347100D42D6A /* PerformanceTests.swift in Sources */,
+				47E27424249C37C800D42D6A /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -813,7 +827,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 2.5;
+				MARKETING_VERSION = 2.6.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tikhop.TPInAppReceipt;
 				PRODUCT_NAME = TPInAppReceipt;
 				SKIP_INSTALL = YES;
@@ -839,7 +853,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 2.5;
+				MARKETING_VERSION = 2.6.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tikhop.TPInAppReceipt;
 				PRODUCT_NAME = TPInAppReceipt;
 				SKIP_INSTALL = YES;
@@ -888,6 +902,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACH_O_TYPE = mh_dylib;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MARKETING_VERSION = 2.6.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tikhop.TPInAppReceipt;
 				PRODUCT_NAME = TPInAppReceipt;
 				SDKROOT = macosx;
@@ -914,6 +929,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACH_O_TYPE = mh_dylib;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MARKETING_VERSION = 2.6.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tikhop.TPInAppReceipt;
 				PRODUCT_NAME = TPInAppReceipt;
 				SDKROOT = macosx;
@@ -942,6 +958,7 @@
 				INFOPLIST_FILE = TPInAppReceipt/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 2.6.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tikhop.TPInAppReceipt;
@@ -974,6 +991,7 @@
 				INFOPLIST_FILE = TPInAppReceipt/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 2.6.2;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tikhop.TPInAppReceipt;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1004,6 +1022,7 @@
 				INFOPLIST_FILE = TPInAppReceipt/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 2.6.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tikhop.TPInAppReceipt;
@@ -1035,6 +1054,7 @@
 				INFOPLIST_FILE = TPInAppReceipt/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 2.6.2;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tikhop.TPInAppReceipt;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

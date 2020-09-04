@@ -6,8 +6,11 @@
 //  Copyright © 2017-2020 Pavel Tikhonenko. All rights reserved.
 //
 
-#if os(iOS) || os(watchOS) || os(tvOS)
+#if os(iOS) || os(tvOS)
 import UIKit
+#elseif os(watchOS)
+import UIKit
+import WatchKit
 #elseif os(macOS)
 import IOKit
 import Cocoa
@@ -85,7 +88,8 @@ public extension InAppReceipt
         try checkAppleRootCertExistence()
         
         // only check certificate chain of trust and signature validity after these version
-        if #available(OSX 10.12, iOS 10.0, tvOS 10.0, watchOS 5.0, *) {
+        if #available(OSX 10.12, iOS 10.0, tvOS 10.0, watchOS 5.0, *)
+		{
             try checkChainOfTrust()
             try checkSignatureValidity()
         }
@@ -260,9 +264,12 @@ fileprivate func guid() -> Data
 {
     
 #if !targetEnvironment(macCatalyst) && targetEnvironment(simulator) // Debug purpose only
-    var uuidBytes = UUID(uuidString: "A2BDE35A-B11A-44B0-95AB-7BBA7A2890C8")!.uuid
+    var uuidBytes = UUID(uuidString: "22C105F3-61B5-4FE4-8CB2-30AD9723D345")!.uuid
     return Data(bytes: &uuidBytes, count: MemoryLayout.size(ofValue: uuidBytes))
-#elseif !targetEnvironment(macCatalyst) && (os(iOS) || os(watchOS) || os(tvOS))
+#elseif os(watchOS)
+    var uuidBytes = WKInterfaceDevice.current().identifierForVendor!.uuid
+    return Data(bytes: &uuidBytes, count: MemoryLayout.size(ofValue: uuidBytes))
+#elseif !targetEnvironment(macCatalyst) && (os(iOS) || os(tvOS))
     var uuidBytes = UIDevice.current.identifierForVendor!.uuid
     return Data(bytes: &uuidBytes, count: MemoryLayout.size(ofValue: uuidBytes))
 #elseif targetEnvironment(macCatalyst) || os(macOS)
